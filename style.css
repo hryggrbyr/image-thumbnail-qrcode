@@ -1,0 +1,72 @@
+:root {
+  color-scheme: dark light;
+}
+body {
+  background-color: canvas;
+  color: canvasText;
+  font-size: 1rem;
+  font-family: "DM Mono", monospace;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  max-width: 1024px;
+  height: 100vh;
+  margin-inline: auto;
+  padding-inline: 5vw;
+  padding-block: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+figure {
+  flex-basis: 80%;
+  font-size: 10px;
+  position: relative;
+  padding: 1ch;
+  display: grid;
+  place-items: center;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 2ch;
+  left: 2ch;
+  z-index: 1;
+  background-color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 4ch;
+}
+
+figure #thumbnail {
+  object-fit: contain;
+}
+
+form {
+  flex-basis: 20%;
+  margin-block-start: auto;
+  padding-block: 1lh;
+  width: 100%;
+}
+
+form > *+* {
+  margin-block-start: 1lh;
+}
+
+form > div {
+  display: flex;
+  align-items: center;
+  gap: 2ch;
+}
+
+label {
+  display: flex;
+  gap: inherit;
+  flex-grow: 999;
+}
+
+input {
+  flex-grow: 999;
+}
